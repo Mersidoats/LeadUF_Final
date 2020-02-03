@@ -32,9 +32,9 @@ if __name__ == '__make_file_Coach__':
     make_file_coach()
 
 
-os.chdir('C:/Users/sa-meredith.bogacz/Desktop/LeadUF_Final/LeadUF COACH Application')
+os.chdir('/LeadUF_Final/LeadUF COACH Application')
 
-coachPairings = pd.read_csv('CoachPairing.csv', header=None, delimiter=',')
+coachPairings = pd.read_csv('CoachPairing.csv', header=None, delimiter=',', encoding='ISO-8859-1')
 CP_data = coachPairings.iloc[1:, ]
 CP_Data_columns = coachPairings.iloc[0]
 CP_data2 = CP_data.drop(CP_data.columns[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 43, 44, 45]],
@@ -88,12 +88,12 @@ CP_data2['Selects'] = CP_data2[CP_data2.columns[0:]].apply(
 
 CP_data2 = CP_data2.drop(CP_data2.columns[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
                                            22, 23, 24, 25, 26, 27, 28]], axis=1)
-CP_data2.to_csv(r'C:/Users/sa-meredith.bogacz/Desktop/LeadUF_Final/LeadUF COACH Application/CP_data2.txt', header=False)
+CP_data2.to_csv(r'/LeadUF_Final/LeadUF COACH Application/CP_data2.txt', header=False)
 make_file_coach('CP_data2.txt')
 
 
-os.chdir('C:/Users/sa-meredith.bogacz/Desktop/LeadUF_Final/LeadUF Participant Application')
-ParticipantPairings = pd.read_csv('PartPairing.csv', header=None, delimiter=',', encoding="utf-8-sig")
+os.chdir('/LeadUF_Final/LeadUF Participant Application')
+ParticipantPairings = pd.read_csv('PartPairing.csv', header=None, delimiter=',', encoding="ISO-8859-1")
 P_data = ParticipantPairings.iloc[1:, ]
 P_Data_columns = ParticipantPairings.iloc[0]
 P_data2 = P_data.drop(P_data.columns[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 38, 39, 40]],
@@ -138,6 +138,6 @@ P_data2['Selects'] = P_data2[P_data2.columns[0:]].apply(
 P_data2 = P_data2.drop(P_data2.columns[[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
                                         20, 21, 22, 23]], axis=1)
 
-P_data2.to_csv(r'C:/Users/sa-meredith.bogacz/Desktop/LeadUF_Final/LeadUF Participant Application/P_data2.txt', header=False)
+P_data2.to_csv(r'/LeadUF_Final/LeadUF Participant Application/P_data2.txt', header=False)
 make_file_app('P_data2.txt')
 print("All done!")
