@@ -5,5 +5,6 @@
  
  The data in this set is strictly test data. In practice, I pull the data from qualtrics using the qualtRics package (ropensci/qualtRics).
  
+ Run LeadUF_get_data.r to access data from Qualtrics.
  Run clean_csv.py to clean data files for aapplicants and coaches.
  Run JaccardSim.r to create a matrix of the top three coach matches for each applicant.
